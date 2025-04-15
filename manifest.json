@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "搜索结果延迟显示",
+  "version": "1.0",
+  "description": "在 Google/Bing 搜索结果旁显示网站延迟",
+  "permissions": ["scripting", "storage"],
+  "host_permissions": [
+    "https://www.google.com/*",
+    "https://www.bing.com/*"
+  ],
+  "icons": {
+    "16": "./icon.png",
+    "48": "./icon.png",
+    "128": "./icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "./icon.png",
+      "48": "./icon.png",
+      "128": "./icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/*",
+        "https://www.bing.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
