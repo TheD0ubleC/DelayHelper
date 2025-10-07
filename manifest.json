@@ -1,33 +1,103 @@
 {
   "manifest_version": 3,
-  "name": "搜索结果延迟显示",
-  "version": "1.0",
-  "description": "在 Google/Bing 搜索结果旁显示网站延迟",
-  "permissions": ["scripting", "storage"],
-  "host_permissions": [
-    "https://www.google.com/*",
-    "https://www.bing.com/*"
+  "name": "Delay Helper",
+  "version": "1.1.0",
+  "description": "Show site latency beside search results on Google/Bing|在 Google/Bing 搜索结果旁显示网站延迟|Google、Bingの検索結果の横にサイトのレイテンシーを表示",
+  "permissions": [
+    "storage"
   ],
-  "icons": {
-    "16": "./icon.png",
-    "48": "./icon.png",
-    "128": "./icon.png"
+  "host_permissions": [
+    "*://*.google.com/*",
+    "*://*.google.com.hk/*",
+    "*://*.google.co.jp/*",
+    "*://*.google.com.tw/*",
+    "*://*.google.co.kr/*",
+    "*://*.google.co.uk/*",
+    "*://*.google.fr/*",
+    "*://*.google.de/*",
+    "*://*.google.ca/*",
+    "*://*.google.it/*",
+    "*://*.google.es/*",
+    "*://*.google.com.br/*",
+    "*://*.google.com.au/*",
+    "*://*.google.com.sg/*",
+    "*://*.google.co.in/*",
+    "*://*.google.pl/*",
+    "*://*.google.nl/*",
+    "*://*.google.se/*",
+    "*://*.google.ru/*",
+    "*://*.google.com.mx/*",
+    "*://*.google.co.id/*",
+    "*://*.google.co.th/*",
+    "*://*.google.com.vn/*",
+    "*://*.google.co.za/*",
+    "*://*.google.com.ar/*",
+    "*://*.google.ch/*",
+    "*://*.google.pt/*",
+    "*://*.google.no/*",
+    "*://*.google.dk/*",
+    "*://*.bing.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
   },
   "action": {
     "default_popup": "popup.html",
-    "default_icon": {
-      "16": "./icon.png",
-      "48": "./icon.png",
-      "128": "./icon.png"
-    }
+    "default_title": "Latency Settings"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   },
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*",
-        "https://www.bing.com/*"
+        "*://*.google.com/*",
+        "*://*.google.com.hk/*",
+        "*://*.google.co.jp/*",
+        "*://*.google.com.tw/*",
+        "*://*.google.co.kr/*",
+        "*://*.google.co.uk/*",
+        "*://*.google.fr/*",
+        "*://*.google.de/*",
+        "*://*.google.ca/*",
+        "*://*.google.it/*",
+        "*://*.google.es/*",
+        "*://*.google.com.br/*",
+        "*://*.google.com.au/*",
+        "*://*.google.com.sg/*",
+        "*://*.google.co.in/*",
+        "*://*.google.pl/*",
+        "*://*.google.nl/*",
+        "*://*.google.se/*",
+        "*://*.google.ru/*",
+        "*://*.google.com.mx/*",
+        "*://*.google.co.id/*",
+        "*://*.google.co.th/*",
+        "*://*.google.com.vn/*",
+        "*://*.google.co.za/*",
+        "*://*.google.com.ar/*",
+        "*://*.google.ch/*",
+        "*://*.google.pt/*",
+        "*://*.google.no/*",
+        "*://*.google.dk/*",
+        "*://*.bing.com/*"
       ],
-      "js": ["content.js"]
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "i18n/translations.json"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
     }
   ]
 }

@@ -1,0 +1,53 @@
+{
+    "en": {
+        "title": "Latency Settings",
+        "language": "Language🌎",
+        "theme": "Theme",
+        "enable": "Enable latency badge",
+        "dynamicColor": "Color by latency",
+        "brightness": "Background brightness",
+        "fontSize": "Base font size (page)",
+        "fixedBg": "Fixed background color",
+        "fontColor": "Text color",
+        "fade": "Fade-in animation",
+        "demoTitle": "Sample search",
+        "demoDesc": "A Google-like preview to show the badge in realistic scale.",
+        "note": "Saved automatically; changes apply after page refresh.",
+        "saved": "Saved. Refresh page to apply.",
+        "savedTheme": "Theme saved."
+    },
+    "zh": {
+        "title": "延迟显示设置",
+        "language": "语言🌎",
+        "theme": "主题",
+        "enable": "启用延迟徽章",
+        "dynamicColor": "根据延迟动态变色",
+        "brightness": "背景亮度调整",
+        "fontSize": "字体基准（网页端）",
+        "fixedBg": "固定背景颜色",
+        "fontColor": "字体颜色",
+        "fade": "淡入动画",
+        "demoTitle": "示例搜索结果标题",
+        "demoDesc": "这是一个贴近 Google 的预览，用来展示徽章在真实比例下的观感。",
+        "note": "已自动保存；网页刷新后生效。",
+        "saved": "已保存，刷新页面后生效。",
+        "savedTheme": "主题已保存。"
+    },
+    "ja": {
+        "title": "レイテンシー設定",
+        "language": "言語🌎",
+        "theme": "テーマ",
+        "enable": "レイテンシーバッジを有効化",
+        "dynamicColor": "レイテンシーに応じて色変更",
+        "brightness": "背景の明るさ",
+        "fontSize": "基準フォントサイズ（ページ）",
+        "fixedBg": "固定背景色",
+        "fontColor": "文字色",
+        "fade": "フェードインアニメーション",
+        "demoTitle": "検索結果タイトル",
+        "demoDesc": "Google に近いプレビューで、実サイズのバッジ表示を確認できます。",
+        "note": "自動保存されます。ページを更新すると反映されます。",
+        "saved": "保存しました。ページ更新後に反映されます。",
+        "savedTheme": "テーマを保存しました。"
+    }
+}
